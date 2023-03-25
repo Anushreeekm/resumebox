@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <title>login Page</title>
+</head>
+<body>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    <div class="container-fluid" >
+        <div class="row">
+            <div class="col">
+                <nav class="navbar navbar-light">
+                    <a class="navbar-brand" href="#">
+                      <img src="data:image/png;base64,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" width="30" height="30" class="d-inline-block align-top" alt="">
+                      Resumebox
+                    </a>
+                  <ul class="nav justify-content-end">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" href="./login.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="./account.html">Create My Account</a>
+                    </li>
+                    </ul>
+                   </nav>
+    <div class="wrapper login">
+        <div class="container">
+            <div class="col-left">
+                <div class="login-text"> 
+                    <h2>Welcome!</h2>
+                    <p>Create your account.<br>For Free!</p>
+                    <a href="account.html" class="btn">Sign Up</a>
+                </div>
+            </div>
+
+            <div class="col-right">
+                <div class="login-form">
+                    <h2>Login</h2>
+                    <form action="">
+                        <p>
+                            <label>Username/Email address<span>*</span></label>
+                            <input type="text" placeholder="Username or Email" required>
+                        </p>
+                        <p>
+                            <label>Password<span>*</span></label>
+                            <input type="password" placeholder="Password" required>
+                        </p>
+                        <p>
+                             <a class="btn btn-primary" type="submit" href="application.html" role="button">Sign Up</a>
+                    
+                        </p>
+                        <p>
+                            <a href="account.html">Forgot password?</a>
+                        </p>
+
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

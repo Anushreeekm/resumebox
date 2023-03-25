@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <title>Resume Generator</title>
+</head>
+<body>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    <div class="container-fluid" >
+        <div class="row">
+            <div class="col">
+                <nav class="navbar navbar-light">
+                    <a class="navbar-brand" href="#">
+                      <img src="data:image/png;base64,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" width="30" height="30" class="d-inline-block align-top" alt="">
+                      Resumebox
+                    </a>
+                  <ul class="nav justify-content-end">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" href="./login.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="./account.html">Create My Account</a>
+                    </li>
+                    </ul>
+                   </nav>
+    <div class="container-fluid" id="cv-form">
+        <h1 class="text-center my-2">Resume Generator</h1>
+        <p class="text-center">Get a beautiful AI-generated resume in seconds</p>
+        <div class="row">
+            <div class="col-md-6 col-md-6">
+                <h3>Personal Information</h3>
+                
+                <div class="form-group">
+                    <label for="nameField">Your Name</label>
+                   <input type="text" id="nameField" placeholder="Enter here" class="form-control">
+                </div>
+
+                <div class="form-group mt-3" >
+                    <label for=contactField">Your Contact Number</label>
+                   <input type="text" id="contactField" placeholder="Enter here" class="form-control">
+                </div>
+
+                <div class="form-group mt-3" >
+                    <label for="addressField">Your Address</label>
+                   <textarea id="addressField" placeholder="Enter here" class="form-control" rows="5"></textarea>
+                </div>
+
+                <div class="form-group mt-3">
+                    <label>Select your Photo</label>
+                    <input id="imgField" type="file" class="form-conntrol"></input>
+                </div>
+
+                <p class="text-secondary my-2">Important Links</p>
+                <div class="form-group mt-3" >
+                    <label for=linkedInField">Your LinkedIn link</label>
+                   <input type="text" id="LinkedInField" placeholder="Enter here" class="form-control">
+                </div>
+
+                <div class="form-group mt-3" >
+                    <label for="githubField">Your Github link</label>
+                   <input type="text" id="githubField" placeholder="Enter here" class="form-control">
+                </div>
+
+            <div class="col-md-6 col-md-12">
+                <h3>Professional Information</h3>
+                <div class="form-group mt-3" >
+                    <label for="">Objective</label>
+                   <textarea id="ObjectiveField" placeholder="Enter here" class="form-control" rows="5"></textarea>
+                </div>
+                <div class="form-group mt-3" id="we">
+                    <label for="">Work Experience</label>
+                   <textarea id="weField" placeholder="Enter here" class="form-control" rows="3"></textarea>
+                </div>
+                
+                
+                
+                <div class="form-group mt-3" id="aq" >
+                    <label for="">Academic Qualification</label>
+                   <textarea  placeholder="Enter here" class="form-control aqField" rows="3"></textarea>
+                </div>
+                <div class="container-fluid text-center mt-3" id="aqAddbutton">
+                    <button onclick= "addNewAQField()" class="btn btn-primary btn-sm">Add</button>
+                </div>
+
+                <div class="form-group mt-3" id="sk" >
+                    <label for="">skills</label>
+                   <textarea id="SkillsField" placeholder="Enter here" class="form-control" rows="3"></textarea>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid text-center mt-3">
+        <button onclick="generateCV()" class="btn btn-primary btn-lg">
+          Generate CV
+        </button>
+      </div>
+    </div>
+    
+  <div class="container-fluid background mt-5" id="cv-tempelate"></div>
+  <div class="row no-gutters">
+ 
+    <div class="col-sm-6 col-md-4 py-5 text-center background"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT173iaPsZ3mJfQ8Mf3k7KzCtAD4h1D9YSB7X5OnJYRUTo71vNxTzPMv9417Xm8YOn0YKY&usqp=CAU" alt="profile photo" class="img-fluid myimg" id="imgT"/> 
+        <div class="container-fluid ">
+         
+          <p id="nameT1">Anushree K M</p>
+          <p id="ContactT">+919123456789</p>
+          <p id="addressT">Bangalore,Karnataka, INDIA </p>
+        </hr>
+      
+          <p id="LkT"><a href="https://www.linkedin.com/in/anushree-k-m-bb856024b/">LinkedIn</a> </p>   
+          <p id="gtT"><a href="https://github.com/Anushreeekm">Github</a></p> 
+      </div>
+    </div>
+
+    <div class="col-sm-6 col-md-8 py-5">
+        <h1 id="nameT2" class="text-center" style="font-weight: 980;">Anushree K M</h1> 
+        <div class="card mt-4">
+            <div class="card-header background">
+                <h3>Objective</h3>
+                
+            </div>
+            <div class="card-body">
+                <p id="ObjectiveT">Seeking a challenging position in a reputed organization where I can learn new skills, expand my knowledge, and leverage my learnings.An organized and motivated employee capable of time management and working under pressure in all environments.A highly motivated and hardworking individual looking for a responsible role in a reputable organization.</p>
+            </div>
+        </div>
+       
+            <div class="card mt-4">
+                <div class="card-header background">
+                    <h3>Work Experience</h3>
+                    
+                </div>
+                <div class="card-body">
+                    <p>
+                        <ul id="weT">
+                            <li>Front End Developer - Tata Consultancy Services, New Delhi | Jul 2020 - Present
+                                <p>Develop new user-facing features using modern SPA front-end frameworks (ie; Vue.js/Angular/React) and Javascript.Validate input before submitting to the back end.
+                                    Bridge the gap between graphic design and technical implementation.
+                                    Translate UI/UX design wireframes to actual code.</p>
+                            </li>
+                            <li>Front End Developer - Shiprocket, New Delhi |Aug 2018 - Jun 2020 
+                                <p>Designed, developed, and tested mobile and desktop software applications and systems.
+                                    Implemented features and UIs that optimize performance.Translated user and business needs into functional front-end design using JavaScript, HTML, and CSS.</p>
+                            
+                            </li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+            <div class="card mt-4">
+                <div class="card-header background">
+                    <h3>Education Qualification</h3>
+                    
+                </div>
+                <div class="card-body">
+                    <p>
+                        <ul id="aqT">
+                            <li>BE from Global Academy Of Technology | 2019-2023
+                                <p>cgpa-9.6</p>
+                            </li>
+                            <li>PUC from KLE's IND PU college |2017-2019
+                                <p>percentage-89.5%</p>
+                            
+                            </li>
+                            <li>School from Sri Vani Education Centre |2006-2017
+                                <p>cgpa-9.6</p>
+                            
+                            </li>
+                        </ul>
+                    </p>
+                </div>
+                <div class="card mt-4">
+                    <div class="card-header background">
+                        <h3>Skills</h3>
+                        
+                    </div>
+                    <div class="card-body">
+                        <p>
+                            <ul id="skT">
+                                <li>HTML</li>
+                                <li>Cascading Style Sheets (CSS)</li>
+                                <li>Node.js</li>
+                                <li>Javascript</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+            <div class="container-fluid mt-3 text-center">
+                <button onclick="printCV()" class="btn btn-primary background ">Print CV</button>
+               </div>
+               </div>
+                </div>
+    </div>
+  </div>
+   
+   
+    
+  
+</body>
+</html>
